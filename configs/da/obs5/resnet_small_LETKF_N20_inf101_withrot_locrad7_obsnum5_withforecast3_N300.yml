@@ -1,0 +1,54 @@
+exp_f_id: functionNet_predictState
+exp_id: resnet_small_LETKF_N20_inf101_withrot_locrad7_obsnum5_withforecast_N300
+datadir: ./data/
+res_dir: ./results/obs5
+K: 300
+T: 4
+dt: 0.05
+lead_time: 1
+seq_length: 1
+gpus: 1
+N_trials: 2
+loss_fun: mse
+batch_size: 64
+dropout_rate: 0.0
+layerNorm: ID
+
+lr: 2e-4
+lr_min: 2e-7
+lr_decay: 0.1
+weight_decay: 1e-4
+max_lr_patience: 20
+max_patience: 15
+max_epochs: 50
+da_model_name: SEResNet
+filters: [32, 64]
+kernel_sizes: [3, 3]
+filters_ks1_init: [32]
+filters_ks1_inter: [64]
+filters_ks1_final: [128]
+dropout_rate: 0.1
+direct_shortcut: True
+
+f_N_trials: 1
+f_lead_time: 1
+f_seq_length: 1
+f_layerNorm: BN
+f_model_name: FunctionConvNetL96
+f_filters: [0]
+f_kernel_sizes: [4]
+f_init_net: rand
+f_K_net: 40
+f_model_forwarder: rk4_default
+f_dt_net: 0.01
+f_alpha_net: 0.5
+with_forecast: 3
+
+obs_num: 5
+da_method: LETKF
+da_N: 120
+da_Inf: 1.02
+da_Bx: 0.1
+da_rot: False
+da_loc_rad: 7
+da_xN: 2
