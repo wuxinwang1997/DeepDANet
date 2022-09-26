@@ -1,4 +1,4 @@
-# The code scripts for manuscript "A deep learning-based data assimilation method inspired by Kalman filter and 4DVar"
+# The code scripts for manuscript "A Prediction-Guided Neural Network for Strong Constraint Data Assimilation"
 
 We will release the rest of our code once we get some feedback from the reviewer.
 
