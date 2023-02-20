@@ -1,4 +1,4 @@
-# The code scripts for manuscript "A Prediction-Guided Neural Network for Strong Constraint Data Assimilation"
+# The code scripts for manuscript "A Neural Network-based Four-Dimensional Variational Data Assimilation Method"
 
 We will release the rest of our code once we get some feedback from the reviewer.
 
